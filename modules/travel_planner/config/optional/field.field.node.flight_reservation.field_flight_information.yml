@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flight_information
+    - node.type.flight_reservation
+    - paragraphs.paragraphs_type.flight_info
+  module:
+    - entity_reference_revisions
+id: node.flight_reservation.field_flight_information
+field_name: field_flight_information
+entity_type: node
+bundle: flight_reservation
+label: 'Flight Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      flight_info: flight_info
+    target_bundles_drag_drop:
+      flight_info:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

@@ -1,0 +1,16 @@
+mysore_pak:
+  label: 'Mysore Pak'
+  image: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Mysore_pak.jpg'
+  ingredients:
+    - Ghee
+    - Sugar
+    - Gram Flour
+
+jhangri:
+  label: 'Jhangri'
+  image: 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Jaangiri.JPG'
+  ingredients:
+    - Urad Flour
+    - Saffron
+    - Ghee
+    - Sugar

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_departure_airport
+    - paragraphs.paragraphs_type.flight_info
+    - taxonomy.vocabulary.airport_codes
+id: paragraph.flight_info.field_departure_airport
+field_name: field_departure_airport
+entity_type: paragraph
+bundle: flight_info
+label: 'Departure airport'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      airport_codes: airport_codes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: airline_companies
+field_type: entity_reference

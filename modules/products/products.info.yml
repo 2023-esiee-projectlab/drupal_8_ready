@@ -1,0 +1,9 @@
+name: products
+type: module
+description: 'Content entity, Configuration entity and plugins.'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure:
+  - entity.importer.collection
+  - entity.product.collection

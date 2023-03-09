@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Airport Codes'
+vid: airport_codes
+description: 'This vocabulary is used by the Travel Planner module.'
+weight: 0

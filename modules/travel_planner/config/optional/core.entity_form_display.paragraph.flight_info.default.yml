@@ -1,0 +1,68 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flight_info.field_airline_company
+    - field.field.paragraph.flight_info.field_arrival_airport
+    - field.field.paragraph.flight_info.field_arrival_time
+    - field.field.paragraph.flight_info.field_departure_airport
+    - field.field.paragraph.flight_info.field_departure_time
+    - field.field.paragraph.flight_info.field_flight_number
+    - paragraphs.paragraphs_type.flight_info
+  module:
+    - datetime
+id: paragraph.flight_info.default
+targetEntityType: paragraph
+bundle: flight_info
+mode: default
+content:
+  field_airline_company:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_arrival_airport:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_arrival_time:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_departure_airport:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_departure_time:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_flight_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

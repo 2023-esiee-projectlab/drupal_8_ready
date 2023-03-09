@@ -1,0 +1,5 @@
+name: Breakfast
+type: module
+description: Select what you want for breakfast
+core: 8.x
+package: Examples

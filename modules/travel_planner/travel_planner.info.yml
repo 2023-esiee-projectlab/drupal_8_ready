@@ -1,0 +1,7 @@
+name: 'Travel Planner'
+type: module
+description: 'Travel Planner module'
+package: 'TravelPlanner'
+core: 8.x
+dependencies:
+  - drupal:node

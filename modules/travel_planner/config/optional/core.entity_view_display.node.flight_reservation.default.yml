@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.flight_reservation.body
+    - field.field.node.flight_reservation.field_flight_details
+    - node.type.flight_reservation
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.flight_reservation.default
+targetEntityType: node
+bundle: flight_reservation
+mode: default
+content:
+  body:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_flight_details:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

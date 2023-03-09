@@ -1,0 +1,4 @@
+services:
+  plugin.manager.breakfast:
+    class: Drupal\breakfast\BreakfastPluginManager
+    arguments: ['@container.namespaces', '@cache.default', '@language_manager', '@module_handler']

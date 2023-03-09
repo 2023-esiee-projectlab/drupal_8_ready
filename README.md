@@ -2,22 +2,31 @@
 
 Ce dépôt a été créé pour mettre à disposition un site Drupal 8 prêt à l'emploi.
 
-## Prérequis
+## Installation et utilisation
+
+Ce Drupal est prêt à l'emploi. Il vous suffit de le cloner sur votre PC et de le démarrer.
+
+### Prérequis
 
 - PHP : **v7.3** (ou ultérieur)
 
-## Informations
+### Informations
 
 - Drupal : **8.9.7**
-- Modules : **aucun**
+- Modules : **rendez-vous plus bas, section modules**
 
-## Démarrage
+### Démarrage
 
 ```
 php -S localhost:8001
 ```
 
-##  Identifiants
+###  Identifiants
 
 - login : dev
 - mdp : dev
+
+## Les modules
+
+Dans Drupal, il est possible de développer et d'ajouter des modules.
+<br/>Vous y trouver quelques modèles intégrer à ce projet dans le dossier [/modules/](/modules/) incluant un guide [REAMDME.md](/modules/README.md)

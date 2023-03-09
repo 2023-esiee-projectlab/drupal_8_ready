@@ -1,0 +1,65 @@
+services:
+    plugin.manager.mailable:
+        class: Drupal\wmmailable\MailableManager
+        parent: default_plugin_manager
+
+    wmmailable.message_builder:
+        class: Drupal\wmmailable\MessageBuilder
+        arguments:
+            - '@config.factory'
+            - '@language_manager'
+            - '@renderer'
+
+    wmmailable.mailer:
+        parent: wmmailable.mailer.direct
+        arguments:
+            - '@plugin.manager.mail'
+
+    wmmailable.mailer.base:
+        abstract: true
+        class: Drupal\wmmailable\Mailer\MailerBase
+        arguments:
+            - '@language_manager'
+            - '@string_translation'
+            - '@config.factory'
+            - '@theme.manager'
+            - '@theme.initialization'
+            - '@plugin.manager.mailable'
+        calls:
+            - [setDefaultLanguageNegotiator, ['@?language_negotiator']]
+            - [setCustomLanguageNegotiator, ['@?wmmailable.language_negotiator']]
+
+    wmmailable.mailer.direct:
+        class: Drupal\wmmailable\Mailer\Mailer
+        parent: wmmailable.mailer.base
+        arguments:
+            - '@logger.channel.wmmailable'
+            - '@plugin.manager.mail'
+
+    wmmailable.mailer.queued:
+        class: Drupal\wmmailable\Mailer\QueuedMailer
+        parent: wmmailable.mailer.base
+        arguments:
+            - '@logger.channel.wmmailable'
+            - '@plugin.manager.mail'
+            - '@queue'
+
+    logger.channel.wmmailable:
+        parent: logger.channel_base
+        arguments: ['wmmailable']
+
+    wmmailable.sent_mail.cleaner:
+        class: Drupal\wmmailable\SentMailCleaner
+        arguments:
+            - '@entity_type.manager'
+            - '@config.factory'
+            - '@logger.channel.wmmailable'
+
+    wmmailable.language_negotiator:
+        class: Drupal\wmmailable\Language\MailableLanguageNegotiator
+        arguments:
+            - '@language_manager'
+            - '@plugin.manager.language_negotiation_method'
+            - '@config.factory'
+            - '@settings'
+            - '@request_stack'

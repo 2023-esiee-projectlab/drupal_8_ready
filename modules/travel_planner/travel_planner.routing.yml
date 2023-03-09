@@ -1,0 +1,18 @@
+travel_planner.description:
+  path: '/reservations'
+  defaults:
+    _controller: '\Drupal\travel_planner\Controller\ReservationPageController::description'
+    _title: 'Travel Details: Flight Reservation'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
+travel_planner.acceptEmail:
+  path: '/reservation/accept_email'
+  defaults:
+    _controller: '\Drupal\travel_planner\Controller\ReservationPageController::acceptEmail'
+    _title: 'Travel Details: Flight details'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'

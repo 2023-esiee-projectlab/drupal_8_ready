@@ -1,0 +1,8 @@
+description: Supports Datatrans's automated tests.
+core: 8.x
+dependencies:
+  - payment_datatrans
+name: Payment Datatrans tests
+package: Datatrans
+hidden: true
+type: module

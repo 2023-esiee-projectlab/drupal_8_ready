@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Airline Companies'
+vid: airline_companies
+description: 'This vocabulary is used by the Travel Planner module.'
+weight: 0

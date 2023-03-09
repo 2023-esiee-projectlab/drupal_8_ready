@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_reservation_info_alter().
+ *
+ * Any module can implement hook_reservation_info_alter() and alter the definitions
+ * of all plugins discovered by the plugin manager.
+ *
+ * Note: Plugin definitions are cached after initially being discovered, and
+ * altered. Any changes you make here will require a cache clear to take effect.
+ *
+ * @see \Drupal\travel_planner\ReservationTypeManager
+ */
+function travel_planner_reservation_info_alter(&$reservation_plugin_info) {
+  // Let's change the 'description' property for all reservations.
+  foreach ($reservation_plugin_info as $plugin_id => $plugin_definition) {
+    // Always lowercase the words Reservation Type in reservation descriptions.
+    $reservation_plugin_info[$plugin_id]['description'] = str_replace(t('Reservation Type'), t('reservation type'), $reservation_plugin_info[$plugin_id]['description']);
+  }
+}

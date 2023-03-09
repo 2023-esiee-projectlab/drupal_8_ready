@@ -1,0 +1,13 @@
+{
+    "name": "mtl/helloworld",
+    "description": "HelloWorld",
+    "type": "drupal-module",
+    "license": "",
+    "authors": [
+        {
+            "name": "Loic DUMAY",
+            "email": "dumay.famille@gmail.com"
+        }
+    ],
+    "require": {}
+}
