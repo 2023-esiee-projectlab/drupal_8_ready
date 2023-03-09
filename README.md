@@ -30,3 +30,7 @@ php -S localhost:8001
 
 Dans Drupal, il est possible de développer et d'ajouter des modules.
 <br/>Vous y trouver quelques modèles intégrer à ce projet dans le dossier [/modules/](/modules/) incluant un guide [REAMDME.md](/modules/README.md)
+
+## Help
+
+En cas de problème, vous trouverez une documentation ici : [2023-esiee-projectlab/drupal_help](https://github.com/2023-esiee-projectlab/drupal_help)
