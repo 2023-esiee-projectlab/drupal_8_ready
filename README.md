@@ -4,7 +4,7 @@ Ce dépôt a été créé pour mettre à disposition un site Drupal 8 prêt à l
 
 ## Prérequis
 
-- PHP : **v7.3**
+- PHP : **v7.3** (ou ultérieur)
 
 ## Informations
 
