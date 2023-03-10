@@ -802,3 +802,4 @@ $databases['default']['default'] = array (
   'driver' => 'sqlite',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_vOsqvE0NOblkXynOQxukhqvNvgk-VzS5zRc7nA34k-s7dlLNkkryuF7bQRtFjlB5sNC50IUmyg/sync';
+$settings['debug']['twig'] = TRUE;

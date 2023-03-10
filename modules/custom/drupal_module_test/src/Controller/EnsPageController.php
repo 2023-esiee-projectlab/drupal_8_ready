@@ -8,8 +8,15 @@ class EnsPageController extends ControllerBase {
 
   public function helloWord(): array
   {
+
+//    $val = [
+//      'name' => 'World',
+//    ];
+
     return [
-      '#markup' => 'Hello, world!',
+      '#theme' => 'main_template',
+      '#name' => 'world',
+      '#title' => 'First test with the template.twig',
     ];
   }
 

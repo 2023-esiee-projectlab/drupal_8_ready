@@ -2,7 +2,9 @@
 
 namespace Drupal\ens_pdf_controller\Controller;
 
-class ArticleController{
+use Drupal\Core\Controller\ControllerBase;
+
+class ArticleController extends ControllerBase{
 
 
   public function page(): array
@@ -17,7 +19,7 @@ class ArticleController{
       return [
         '#theme' => 'article_list',
         '#items' => $items,
-        '#title' => 'our aticle list',
+        '#title' => 'our article list',
       ];
 
   }

@@ -1,16 +1,20 @@
 <?php
 
 /**
- * Implements hook_menu().
+ * Implements hook_theme().
  */
-function custom_module_menu(): array
+function custom_module_theme($existing, $type, $theme, $path): array
 {
   $items['testModule'] = array(
-    'title' => 'My Custom Page',
-    'page callback' => '\Drupal\drupal_module_test\Controller\EnsPageController::helloWord',
-    'access arguments' => array('access content'),
+    'main_template' => array(
+      'variables' => array(
+        'name' => '',
+        'title' => '',
+      ),
+      'template' => 'main-template',
+      'path' => drupal_get_path('module', 'drupal_module_test') . '/templates',
+    ),
   );
 
   return $items;
 }
-

@@ -9,13 +9,15 @@
  */
 function ens_pdf_controller_theme($existing, $type, $theme, $path): array
 {
-    return [
-        'article_list' =>[
-            'variable' => [
-                'item'=> [],
-                'title'=>[],
-            ]
-        ]
-    ];
+  $items['ens'] = array(
+      'article_list' =>array(
+          'variable' => array(
+              'item'=> array(),
+              'title'=>array(),
+          )
+      )
+  );
+
+  return $items;
 }
 
