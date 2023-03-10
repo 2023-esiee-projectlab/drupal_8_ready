@@ -1,8 +1,17 @@
-importer.import:
-  path: '/helloworlds'
-  defaults:
-    source: ''
-    _title: 'HelloWorld'
-#    _controller: '\Drupal\helloworld\Controller\HelloWorldController::show'
-#  requirements:
-#    _permission: 'access content'
+#importer.import:
+#  path: '/helloworlds'
+#  defaults:
+#    source: ''
+#    _title: 'HelloWorld'
+##    _controller: '\Drupal\helloworld\Controller\helloWorldController::show'
+##  requirements:
+##    _permission: 'access content'
+
+hello_world:
+path: '/helloworlds'
+
+defaults:
+_controller: \Drupal\ens\helloworld\src\Controller\helloWorldController::hello
+
+requirements:
+_permission: 'access content'
