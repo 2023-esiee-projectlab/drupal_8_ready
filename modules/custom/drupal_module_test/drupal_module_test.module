@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function my_custom_module_menu(): array
+{
+  $items['my-custom-path'] = array(
+    'title' => 'My Custom Page',
+    'page callback' => 'my_custom_module_page_callback',
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+/**
+ * Page callback for my-custom-path.
+ */
+function my_custom_module_page_callback(): array
+{
+  return array(
+    '#markup' => 'Hello, world!',
+  );
+}

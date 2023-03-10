@@ -1,0 +1,9 @@
+name : Drupal Module Example
+core : 8.x
+type : module
+version : '1.0'
+package : Our nice module with controller and module
+description : 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA !'
+#dependencies: { }
+core_version_requirement: ^8.9
+
