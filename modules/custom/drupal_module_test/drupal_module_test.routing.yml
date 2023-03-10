@@ -1,0 +1,7 @@
+my_module.custom_route:
+  path: '/testModule'
+  defaults:
+    _controller: '\Drupal\drupal_module_test\Controller\EnsPageController::helloWord'
+    _title: 'My Custom Route'
+  requirements:
+    _permission: 'access content'

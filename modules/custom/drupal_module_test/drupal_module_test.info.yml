@@ -1,4 +1,4 @@
-name: My Custom Module
+name: ENS Pdf Module
 core : 8.x
 version : '1.0'
 type: module

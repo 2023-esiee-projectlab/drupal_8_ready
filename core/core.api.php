@@ -385,7 +385,7 @@
  *   mymodule.myroute:
  *     path: '/admin/mypath/{configurable_language}'
  *     defaults:
- *       _controller: '\Drupal\mymodule\MyController::myMethod'
+ *       _controller: '\Drupal\mymodule\EnsPageController::myMethod'
  *     options:
  *       parameters:
  *         configurable_language:
