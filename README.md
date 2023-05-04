@@ -15,10 +15,10 @@ Ce Drupal est prêt à l'emploi. Il vous suffit de le cloner sur votre PC et de 
 - Drupal : **8.9.7**
 - Modules : **rendez-vous plus bas, section modules**
 
-### Démarrage
+### Installation & Démarrage
 
 ```
-php -S localhost:8001
+composer update && php -S localhost:8001
 ```
 
 ###  Identifiants
