@@ -1,0 +1,3 @@
+administrateur:
+  title: 'Administrateur du site'
+  description: 'Les administrateurs peuvent configurer le module PDF Generator.'

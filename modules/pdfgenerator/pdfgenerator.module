@@ -5,7 +5,56 @@
  * Contains breakfast.module
  */
 
+// Permet d'implémenter l'interface de configuration de Drupal.
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Form\FormStateInterface;
+// Permet d'implémenter l'interface de routage de Drupal.
 use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Provides a form for configuring Mon module settings.
+ */
+class MonModuleSettingsForm extends ConfigFormBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    return 'mon_module_settings_form';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return ['mon_module.settings'];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
+    $config = $this->config('mon_module.settings');
+
+    $form['setting'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Setting'),
+      '#default_value' => $config->get('setting'),
+    ];
+
+    return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $config = $this->config('mon_module.settings');
+    $config->set('setting', $form_state->getValue('setting'));
+    $config->save();
+    parent::submitForm($form, $form_state);
+  }
+}
 
 /**
  * Implements hook_help().
