@@ -1,0 +1,7 @@
+name: PDF Generator
+type: module
+description: Ceci est un module de génération de PDF créer par l'ESIEE-IT pour l'ENS.
+package: ESIEE-IT & ENS
+version : 0.0.1
+core: 8.x
+dependencies: { }

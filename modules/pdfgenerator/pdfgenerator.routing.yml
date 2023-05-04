@@ -1,0 +1,8 @@
+importer.import:
+  path: '/pdfgenerator'
+  defaults:
+    source: ''
+    _title: 'PdfGenerator'
+#    _controller: '\Drupal\pdfgenerator\Controller\PdfGeneratorManager::show'
+#  requirements:
+#    _permission: 'access content'

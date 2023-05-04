@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains breakfast.module
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+
+function pdfgenerator_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the breakfast module.
+    case 'help.page.pdfgenerator':
+      $output = '';
+      $output .= '<h3>' . t('A propos') . '</h3>';
+      $output .= '<p>' . t('Ce module permet de générer un fichier PDF.') . '</p>';
+      return $output;
+    break;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function pdfgenerator_theme()
+{
+  $theme = [];
+
+  return $theme;
+}

@@ -1,0 +1,34 @@
+{
+    "name": "esiee/pdf_generator",
+    "description": "ESIEE - 2023 - Module de génération de PDF",
+    "type": "drupal-module",
+    "license": "GPL-3.0-only",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Loïc DUMAY",
+            "email": "loic.dumay@edu.itescia.fr"
+        },
+        {
+            "name": "Emmanuel ROSE",
+            "email": "emmanuel.rose@edu.itescia.fr"
+        },
+        {
+            "name": "Maxence HENNEKEIN",
+            "email": "maxence.hennekein@edu.esiee-it.fr"
+        },
+        {
+            "name": "Zhihao CHEN",
+            "email": "zhihao.chen@edu.esiee-it.fr"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "esiee/pdf_generator": "dev-main"
+    },
+    "autoload": {
+        "psr-0": {
+            "esiee\\pdf_generator\\": "src/"
+        }
+    }
+}

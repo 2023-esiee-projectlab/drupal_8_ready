@@ -1,0 +1,4 @@
+services:
+  plugin.manager.unit:
+    class: Drupal\pdfgenerator\PdfGeneratorManager
+    arguments: ['@container.namespaces', '@cache.default', '@language_manager', '@module_handler']
