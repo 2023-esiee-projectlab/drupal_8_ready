@@ -1,3 +1,7 @@
+# - - IDEs
+
+.idea/
+
 # - - gitignore template for Drupal 8 projects
 #
 #  - - earlier versions of Drupal are tracked in `community/PHP/`
@@ -22,7 +26,11 @@
 #/sitessimpletest
 
 #  - - Ignore drupal core (if not versioning drupal sources)
-#/core
+core/
+modules/contrib/
+sites/default/files/
+vendor/
+
 #/modules/README.txt
 #/profiles/README.txt
 #/sitesREADME.txt
@@ -30,7 +38,6 @@
 #/sitesexample.settings.local.php
 #/sitesdevelopment.services.yml
 #/themes/README.txt
-/vendor
 #/.csslintrc
 #/.editorconfig
 #/.eslintignore
@@ -47,6 +54,3 @@
 #/robots.txt
 #/update.php
 #/web.config
-
-
-.idea
