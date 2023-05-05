@@ -2,6 +2,7 @@
 
 namespace Drupal\paragraphs\Form;
 
+// Permet d'implémenter l'interface de configuration de Drupal.
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -29,11 +30,20 @@ class ParagraphsSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('paragraphs.settings');
+
+    /*
+    $form['setting'] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Setting'),
+        '#default_value' => $config->get('setting'),
+    ];
+    */
+
     $form['show_unpublished'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Show unpublished Paragraphs'),
-      '#default_value' => $config->get('show_unpublished'),
-      '#description' => $this->t('Allow users with "View unpublished paragraphs" permission to see unpublished Paragraphs.')
+        '#type' => 'checkbox',
+        '#title' => $this->t('Show unpublished Paragraphs'),
+        '#default_value' => $config->get('show_unpublished'),
+        '#description' => $this->t('Allow users with "View unpublished paragraphs" permission to see unpublished Paragraphs.')
     ];
 
     return parent::buildForm($form, $form_state);

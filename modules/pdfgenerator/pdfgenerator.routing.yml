@@ -1,9 +1,9 @@
-importer.import:
+pdfgenerator.settings:
   path: '/admin/config/pdfgenerator/'
   defaults:
     source: ''
-    _form: '\Drupal\pdfgenerator\Form\MonModuleSettingsForm'
-    _title: 'PdfGenerator'
+    _form: '\Drupal\pdfgenerator\Form\PdfGeneratorSettingsForm'
+    _title: 'PdfGenerator - Configurations'
 #    _controller: '\Drupal\pdfgenerator\Controller\PdfGeneratorManager::show'
   requirements:
-    _permission: 'administrateur'
+    _permission: 'administer pdfgenerator settings'
