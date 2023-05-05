@@ -1,5 +1,7 @@
 <?php
 
+namespace pdfgenerator;
+
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -24,6 +26,15 @@ class PdfGeneratorSettingsForm extends ConfigFormBase{
      */
     public function buildForm(array $form, FormStateInterface $form_state) {
         $config = $this->config('pdfgenerator.settings');
+
+        /*
+        $form['setting'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Setting'),
+            '#default_value' => $config->get('setting'),
+        ];
+        */
+
         $form['show_button_on_articles'] = [
             '#type' => 'checkbox',
             '#title' => $this->t('[A] Activer ou désactiver le bouton de la génération de PDF pour les articles publiés'),
