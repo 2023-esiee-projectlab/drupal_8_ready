@@ -1,5 +1,5 @@
 pdfgenerator.settings:
-  path: '/admin/config/pdfgenerator/'
+  path: '/admin/config/pdfgenerator/settings'
   defaults:
     source: ''
     _form: '\Drupal\pdfgenerator\Form\PdfGeneratorSettingsForm'
