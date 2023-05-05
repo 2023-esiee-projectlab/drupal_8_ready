@@ -24,10 +24,10 @@ class PdfGeneratorSettingsForm extends ConfigFormBase{
      */
     public function buildForm(array $form, FormStateInterface $form_state) {
         $config = $this->config('pdfgenerator.settings');
-        $form['pdfgenerator_show_button_articles'] = [
+        $form['show_button_on_articles'] = [
             '#type' => 'checkbox',
-            '#title' => $this->t('Activer ou désactiver le bouton de la génération de PDF pour les articles publiés'),
-            '#default_value' => $config->get('pdfgenerator_show_button_articles'),
+            '#title' => $this->t('[A] Activer ou désactiver le bouton de la génération de PDF pour les articles publiés'),
+            '#default_value' => $config->get('show_button_on_articles'),
             '#description' => $this->t('Si cette case est cochée, le bouton de la génération de PDF sera affiché pour les articles publiés.'),
         ];
 
@@ -38,8 +38,8 @@ class PdfGeneratorSettingsForm extends ConfigFormBase{
      * {@inheritdoc}
      */
     public function submitForm(array &$form, FormStateInterface $form_state) {
-        $config = $this->config('paragraphs.settings');
-        $config->set('show_unpublished', $form_state->getValue('show_unpublished'));
+        $config = $this->config('pdfgenerator.settings');
+        $config->set('show_button_on_articles', $form_state->getValue('show_button_on_articles'));
         $config->save();
 
         parent::submitForm($form, $form_state);
