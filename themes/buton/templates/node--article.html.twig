@@ -1,0 +1,7 @@
+{# Inside node--article.html.twig #}
+
+<article{{ attributes }}>
+{# Existing code for rendering the article content #}
+
+<a href="{{ path('pdf_exporter.export_pdf', {'node': node.id}) }}" class="button">Export as PDF </a>
+</article>

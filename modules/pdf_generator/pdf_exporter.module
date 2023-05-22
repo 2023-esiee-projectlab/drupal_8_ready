@@ -1,0 +1,69 @@
+<?php
+
+use Controller\pdf\Pdf;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\Response;
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function pdf_generator_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+
+  // Add PDF generator button to article nodes.
+  if ($node->getType() == 'article') {
+    $variables['content']['pdf_button'] = [
+      '#type' => 'link',
+      '#title' => t('Generate PDF'),
+      '#url' => Url::fromRoute('pdf_generator.generate_pdf', ['node' => $node->id()]),
+      '#attributes' => [
+        'class' => ['button'],
+      ],
+    ];
+  }
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function pdf_generator_entity_view(array &$build, $entity, $display, $view_mode) {
+  if ($entity->getEntityTypeId() === 'node' && $entity->getType() === 'article' && $view_mode === 'full') {
+    $build['pdf_button'] = [
+      '#type' => 'link',
+      '#title' => t('Generate PDF'),
+      '#url' => Url::fromRoute('pdf_generator.generate_pdf', ['node' => $entity->id()]),
+      '#attributes' => [
+        'class' => ['button'],
+      ],
+    ];
+  }
+}
+
+/**
+ * Generates a PDF for a specific node.
+ */
+function pdf_generator_generate_pdf(RouteMatchInterface $route_match): Response {
+  $node = $route_match->getParameter('node');
+
+  // Generate PDF content based on the node.
+  $pdf_content = '<h1>' . $node->label() . '</h1>';
+  $pdf_content .= '<p>' . $node->get('body')->value . '</p>';
+
+  // Create a PDF file.
+  $pdf = new Pdf();
+  $pdf->addPage($pdf_content);
+  $pdf_file_path = 'public://pdf/' . $node->id() . '.pdf';
+  $pdf->save($pdf_file_path);
+
+  // Provide the PDF file as a download.
+  $response = new Response();
+  $response->headers->set('Content-Type', 'application/pdf');
+  $response->headers->set('Content-Disposition', 'attachment; filename="' . $node->label() . '.pdf"');
+  $response->setContent(file_get_contents($pdf_file_path));
+
+  // Delete the temporary PDF file.
+  unlink($pdf_file_path);
+
+  return $response;
+}
