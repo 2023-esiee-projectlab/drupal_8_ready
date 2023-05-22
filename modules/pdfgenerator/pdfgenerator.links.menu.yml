@@ -1,5 +1,5 @@
 pdfgenerator.settings:
     title: 'PDF Generator'
     parent: system.admin_config_content
-    description: "Ceci est un module de génération de PDF créer par l'ESIEE-IT pour l'ENS."
+    #description: "Ceci est un module de génération de PDF créer par l'ESIEE-IT pour l'ENS."
     route_name: pdfgenerator.settings
