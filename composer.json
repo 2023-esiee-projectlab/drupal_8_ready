@@ -91,6 +91,7 @@
         }
     },
     "require-dev": {
+        "drupal/entity_print": "2.6",
         "drupal/paragraphs_modal_edit": "1.1"
     }
 }

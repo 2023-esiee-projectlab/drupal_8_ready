@@ -10,6 +10,7 @@ return array(
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DivisionByZeroError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+    'Dompdf\\Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
     'Drupal' => $baseDir . '/core/lib/Drupal.php',
     'Drupal\\Component\\Utility\\Timer' => $baseDir . '/core/lib/Drupal/Component/Utility/Timer.php',
     'Drupal\\Component\\Utility\\Unicode' => $baseDir . '/core/lib/Drupal/Component/Utility/Unicode.php',

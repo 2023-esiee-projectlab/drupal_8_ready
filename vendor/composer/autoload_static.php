@@ -68,6 +68,8 @@ class ComposerStaticInit9e98581fd67d5870d3ff87e054f00a0d
             'Symfony\\Component\\ClassLoader\\' => 30,
             'Symfony\\Cmf\\Component\\Routing\\' => 30,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
+            'Svg\\' => 4,
+            'Sabberworm\\CSS\\' => 15,
         ),
         'P' => 
         array (
@@ -93,6 +95,10 @@ class ComposerStaticInit9e98581fd67d5870d3ff87e054f00a0d
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
         ),
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -105,6 +111,7 @@ class ComposerStaticInit9e98581fd67d5870d3ff87e054f00a0d
             'Drupal\\Composer\\Plugin\\Scaffold\\' => 32,
             'Drupal\\Composer\\Plugin\\ProjectMessage\\' => 38,
             'Drupal\\Component\\' => 17,
+            'Dompdf\\' => 7,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\Cache\\' => 22,
@@ -223,6 +230,14 @@ class ComposerStaticInit9e98581fd67d5870d3ff87e054f00a0d
         array (
             0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
         ),
+        'Svg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'Sabberworm\\CSS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -271,6 +286,10 @@ class ComposerStaticInit9e98581fd67d5870d3ff87e054f00a0d
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
@@ -298,6 +317,10 @@ class ComposerStaticInit9e98581fd67d5870d3ff87e054f00a0d
         'Drupal\\Component\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core/lib/Drupal/Component',
+        ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
         'Doctrine\\Common\\Lexer\\' => 
         array (
@@ -387,6 +410,7 @@ class ComposerStaticInit9e98581fd67d5870d3ff87e054f00a0d
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'Drupal' => __DIR__ . '/../..' . '/core/lib/Drupal.php',
         'Drupal\\Component\\Utility\\Timer' => __DIR__ . '/../..' . '/core/lib/Drupal/Component/Utility/Timer.php',
         'Drupal\\Component\\Utility\\Unicode' => __DIR__ . '/../..' . '/core/lib/Drupal/Component/Utility/Unicode.php',

@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c22de901fcb0ad5196dc4389df0605679f5f9c34',
+        'reference' => '2a43ca6934e61a1fc88a02f6d6e8a97cd6b9102f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -90,6 +90,15 @@
             'install_path' => __DIR__ . '/../doctrine/lexer',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'dompdf/dompdf' => array(
+            'pretty_version' => 'v2.0.3',
+            'version' => '2.0.3.0',
+            'reference' => 'e8d2d5e37e8b0b30f0732a011295ab80680d7e85',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dompdf/dompdf',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'drupal/action' => array(
             'dev_requirement' => false,
@@ -448,6 +457,15 @@
                 0 => '8.9.7',
             ),
         ),
+        'drupal/entity_print' => array(
+            'pretty_version' => '2.6.0',
+            'version' => '2.6.0.0',
+            'reference' => '8.x-2.6',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/entity_print',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'drupal/entity_reference' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -562,7 +580,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c22de901fcb0ad5196dc4389df0605679f5f9c34',
+            'reference' => '2a43ca6934e61a1fc88a02f6d6e8a97cd6b9102f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -997,6 +1015,24 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'phenx/php-font-lib' => array(
+            'pretty_version' => '0.5.4',
+            'version' => '0.5.4.0',
+            'reference' => 'dd448ad1ce34c63d09baccd05415e361300c35b4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-font-lib',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
+        'phenx/php-svg-lib' => array(
+            'pretty_version' => '0.5.0',
+            'version' => '0.5.0.0',
+            'reference' => '76876c6cf3080bcb6f249d7d59705108166a6685',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-svg-lib',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'psr/container' => array(
             'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
@@ -1062,6 +1098,15 @@
             'replaced' => array(
                 0 => 'v1.10.10',
             ),
+        ),
+        'sabberworm/php-css-parser' => array(
+            'pretty_version' => '8.4.0',
+            'version' => '8.4.0.0',
+            'reference' => 'e41d2140031d533348b2192a83f02d8dd8a71d30',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sabberworm/php-css-parser',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'shama/baton' => array(
             'dev_requirement' => false,
