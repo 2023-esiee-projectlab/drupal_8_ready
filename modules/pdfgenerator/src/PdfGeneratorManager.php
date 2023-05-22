@@ -1,6 +1,6 @@
 <?php
 
-namespace pdfgenerator;
+namespace Drupal\pdfgenerator;
 
 class PdfGeneratorManager
 {

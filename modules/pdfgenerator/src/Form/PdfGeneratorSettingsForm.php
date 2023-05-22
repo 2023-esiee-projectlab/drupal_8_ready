@@ -1,11 +1,10 @@
 <?php
 
-namespace pdfgenerator;
+namespace Drupal\pdfgenerator;
 
-/*
+// Permet d'implémenter l'interface de configuration de Drupal.
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-*/
 
 class PdfGeneratorSettingsForm extends ConfigFormBase{
 
