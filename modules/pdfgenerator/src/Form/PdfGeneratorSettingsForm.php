@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\pdfgenerator;
+namespace Drupal\pdfgenerator\Form;
 
 // Permet d'implémenter l'interface de configuration de Drupal.
 use Drupal\Core\Form\ConfigFormBase;
