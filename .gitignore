@@ -1,6 +1,12 @@
 # - - IDEs
-
 .idea/
+
+# test modules
+modules/dev_help
+# modules in development
+modules/pdf_generator_drupal_module
+
+
 
 # - - gitignore template for Drupal 8 projects
 #
