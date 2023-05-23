@@ -1,0 +1,28 @@
+<script>
+  (function() {
+    var downloadUrl = '/node/{{ node.id }}/pdf-export';
+    var redirectUrl = '/node/{{ node.id }}';
+
+    var downloadLink = document.createElement('a');
+    downloadLink.href = downloadUrl;
+    downloadLink.download = 'article.pdf';
+
+    var clickEvent = new MouseEvent('click', {
+      'view': window,
+      'bubbles': true,
+      'cancelable': false
+    });
+
+    downloadLink.dispatchEvent(clickEvent);
+
+    // Redirect the user after a short delay (e.g., 1 second).
+    setTimeout(function() {
+      window.location.href = redirectUrl;
+    }, 1000);
+  })();
+</script>
+
+
+
+
+

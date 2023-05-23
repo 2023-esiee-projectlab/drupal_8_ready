@@ -1,0 +1,5 @@
+name: 'ENS pdf generator'
+type: module
+description: 'Adds a PDF export button to articles.'
+package: Custom
+core_version_requirement: ^8 || ^9

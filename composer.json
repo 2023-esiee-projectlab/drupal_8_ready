@@ -20,7 +20,8 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
-        "drupal/paragraphs": "1.8"
+        "drupal/paragraphs": "1.8",
+        "drupal/tcpdf": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
