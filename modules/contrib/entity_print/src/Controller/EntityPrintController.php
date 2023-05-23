@@ -110,6 +110,8 @@ class EntityPrintController extends ControllerBase {
   public function viewPrintDebug($export_type, $entity_type, $entity_id) {
     $entity = $this->entityTypeManager->getStorage($entity_type)->load($entity_id);
     $use_default_css = $this->config('entity_print.settings')->get('default_css');
+	var_dump($this->printBuilder, $entity, $use_default_css);
+	exit;
     return new Response($this->printBuilder->printHtml($entity, $use_default_css, FALSE));
   }
 
