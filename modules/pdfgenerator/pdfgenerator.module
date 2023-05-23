@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains breakfast.module
+ * Contains pdfgenerator.module
  */
 
 // Permet d'implémenter l'interface de routage de Drupal.
@@ -15,7 +15,6 @@ use Drupal\Core\Routing\RouteMatchInterface;
 function pdfgenerator_help($route_name, RouteMatchInterface $route_match)
     {
         switch ($route_name) {
-            // Main module help for the breakfast module.
             case 'help.page.pdfgenerator':
             $output = '';
             $output .= '<h3>' . t('À propos') . '</h3>';

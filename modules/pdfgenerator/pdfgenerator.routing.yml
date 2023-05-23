@@ -1,8 +1,40 @@
+# Liaison avec :
+# - le block de configuration du module PDF Generator, dans le menu de configuration de Drupal
+# - le controller de block de menu de configuration de Drupal
+# - les sous-menus du module PDF Generator dans le menu de configuration de Drupal
+pdfgenerator.admin_config_pdfgenerator:
+    path: '/admin/config/services'
+    defaults:
+        _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+        _title: 'PDF Generator'
+    requirements:
+        _permission: 'access administration pages'
+
+# Liaison avec :
+# - le sous-menu de configuration du module PDF Generator, dans le block de configuration du module PDF Generator, dans le menu de configuration de Drupal
 pdfgenerator.settings:
-  path: '/admin/config/pdfgenerator/settings'
-  defaults:
-    _form: '\Drupal\pdfgenerator\Form\PdfGeneratorSettingsForm'
-    _title: 'PdfGenerator - Configurations'
-#    _controller: '\Drupal\pdfgenerator\Controller\PdfGeneratorManager::show'
-  requirements:
-    _permission: 'administer pdfgenerator settings'
+    path: '/admin/config/pdfgenerator/settings'
+    defaults:
+        _title: 'PdfGenerator - Configurations'
+        _form: '\Drupal\pdfgenerator\Form\PdfGeneratorSettingsForm'
+        #    _controller: '\Drupal\pdfgenerator\Controller\PdfGeneratorManager::show'
+    requirements:
+        _permission: 'administer pdfgenerator settings'
+
+# Liaison avec :
+# - le sous-menu de permissions du module PDF Generator, dans le block de configuration du module PDF Generator, dans le menu de configuration de Drupal
+pdfgenerator.permissions:
+    path: '/admin/people/permissions#module-pdfgenerator'
+    defaults:
+        _title: 'PdfGenerator - Permissions'
+    requirements:
+        _permission: 'administer pdfgenerator settings'
+
+# Liaison avec :
+# - le sous-menu "A propos" du module PDF Generator, dans le block de configuration du module PDF Generator, dans le menu de configuration de Drupal
+pdfgenerator.about:
+    path: '/admin/help/pdfgenerator'
+    defaults:
+        _title: 'PdfGenerator - A propos'
+    requirements:
+        _permission: 'administer pdfgenerator settings'

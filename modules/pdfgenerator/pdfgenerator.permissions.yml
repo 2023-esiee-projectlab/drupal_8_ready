@@ -1,3 +1,3 @@
 administer pdfgenerator settings:
-  title: 'Administrateur des paramètres <b>PDF Generator.</b>'
-  description: 'Les administrateurs peuvent configurer le module <b>PDF Generator.</b>'
+    title: 'Administrateur des paramètres de <b>PDF Generator.</b>'
+    description: 'Les administrateurs peuvent configurer le module <b>PDF Generator.</b>'

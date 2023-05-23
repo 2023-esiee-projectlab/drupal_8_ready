@@ -1,5 +1,23 @@
-pdfgenerator.settings:
+# Block de configuration du module PDF Generator dans le menu de configuration de Drupal
+pdfgenerator.admin_config_pdfgenerator:
     title: 'PDF Generator'
-    parent: system.admin_config_content
-    description: "Ceci est un module de génération de PDF créer par l'ESIEE-IT pour l'ENS."
+    parent: system.admin_config
+    route_name: pdfgenerator.admin_config_pdfgenerator
+
+pdfgenerator.settings:
+    title: 'Configurations'
+    parent: pdfgenerator.admin_config_pdfgenerator
+    description: "Configuration des options de PDF Generator."
     route_name: pdfgenerator.settings
+
+pdfgenerator.permissions:
+    title: 'Permissions'
+    parent: pdfgenerator.admin_config_pdfgenerator
+    description: "Configuration des permissions de PDF Generator."
+    route_name: pdfgenerator.permissions
+
+pdfgenerator.about:
+    title: 'A propos'
+    parent: pdfgenerator.admin_config_pdfgenerator
+    description: "A propos de PDF Generator."
+    route_name: pdfgenerator.about
