@@ -1,3 +1,0 @@
-mailer: wmmailable.mailer.direct
-sender: php_mail
-sent_mail_retention: 2592000
