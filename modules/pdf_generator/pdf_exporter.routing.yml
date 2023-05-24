@@ -1,0 +1,7 @@
+pdf_exporter.export_pdf:
+  path: '/node/{node}/export-pdf'
+  defaults:
+    _controller: '\Drupal\pdf_exporter\Controller\PdfExportController::exportPdf'
+    _title: 'Export PDF'
+  requirements:
+    _permission: 'access content'

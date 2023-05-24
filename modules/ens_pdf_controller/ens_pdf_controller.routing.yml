@@ -1,0 +1,7 @@
+ensPdf_controller.article_list:
+  path : '/ens/article_list'
+  defaults:
+    _controller: '\Drupal\ens_pdf_controller\Controller\ArticleController::page'
+    _title: 'our custom Article'
+  requirements:
+    _permission: 'access content'

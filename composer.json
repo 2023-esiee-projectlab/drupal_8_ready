@@ -21,11 +21,12 @@
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/paragraphs": "1.8",
-        "drupal/pdf_generator": "^2.0"
+        "drupal/tcpdf": "^2.0"
     },
     "require-dev": {
         "drupal/entity_print": "2.6",
-        "drupal/paragraphs_modal_edit": "1.1"
+        "drupal/paragraphs_modal_edit": "1.1",
+        "drupal/pdf_generator": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"

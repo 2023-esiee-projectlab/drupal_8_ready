@@ -1,0 +1,16 @@
+<?php
+
+/*This file contain the module implementation code*/
+
+/**
+ * Implements hook_menu().
+ */
+function my_pdf_module_menu(): array {
+  $items = [];
+  $items['node/%node/pdf-export'] = [
+    'title' => 'Export as PDF',
+    'route_name' => 'my_pdf_module.export_pdf',
+    'weight' => 10,
+  ];
+  return $items;
+}
