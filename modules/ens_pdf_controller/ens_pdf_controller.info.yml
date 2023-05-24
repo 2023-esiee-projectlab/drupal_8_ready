@@ -1,9 +1,0 @@
-name : Ens Drupal Module Example
-core : 8.x
-type : module
-version : '1.0'
-package : Custom
-description : 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA !'
-#dependencies: { }
-core_version_requirement: ^8 || ^9
-

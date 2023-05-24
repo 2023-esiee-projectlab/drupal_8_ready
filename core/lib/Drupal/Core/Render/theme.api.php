@@ -93,7 +93,7 @@
  * defining a function called THEME_HOOK() in its THEME.theme file, where THEME
  * is the machine name of the theme (for example, 'bartik' is the machine name
  * of the core Bartik theme, and it would define a function called
- * bartik_search_result() in the bartik.theme file, if the search_result hook
+ * bartik_search_result() in the formation.theme file, if the search_result hook
  * implementation was a function instead of a template). Normally, copying the
  * default function is again a good starting point for overriding its behavior.
  * Again, note that theme functions (unlike templates) must explicitly escape

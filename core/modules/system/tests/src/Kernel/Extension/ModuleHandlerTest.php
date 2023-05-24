@@ -352,7 +352,7 @@ class ModuleHandlerTest extends KernelTestBase {
     // Generate the list of available themes.
     $themes = \Drupal::service('theme_handler')->rebuildThemeData();
     // Check that the mtime field exists for the bartik theme.
-    $this->assertTrue(!empty($themes['bartik']->info['mtime']), 'The bartik.info.yml file modification time field is present.');
+    $this->assertTrue(!empty($themes['bartik']->info['mtime']), 'The ens.info.yml file modification time field is present.');
     // Use 0 if mtime isn't present, to avoid an array index notice.
     $test_mtime = !empty($themes['bartik']->info['mtime']) ? $themes['bartik']->info['mtime'] : 0;
     // Ensure the mtime field contains a number that is greater than zero.

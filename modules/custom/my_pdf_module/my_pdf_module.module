@@ -1,7 +1,25 @@
 <?php
 
-/*This file contain the module implementation code*/
-
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ */
+function my_pdf_module_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // Check if the content type is "article".
+  if ($variables['elements']['#node']->getType() === 'article') {
+    // Add a custom template suggestion for articles.
+    $suggestions[] = 'node--article-custom';
+  }
+}
+/**
+ * Implements hook_theme().
+ */
+function my_pdf_module_theme($existing, $type, $theme, $path): array {
+  return [
+    'node__article_custom' => [
+      'variables' => ['test_var' => NULL],
+    ],
+  ];
+}
 /**
  * Implements hook_menu().
  */
@@ -14,3 +32,15 @@ function my_pdf_module_menu(): array {
   ];
   return $items;
 }
+
+///**
+// * Implements hook_help().
+// */
+//function my_pdf_module_help($route_name, Route $route, \Symfony\Component\HttpFoundation\Request $request): string {
+//  switch ($route_name) {
+//    case 'help.page.my_pdf_module':
+//      return '<p>' . t("Provides a PDF export button for articles.") . '</p>';
+//    default:
+//      return '';
+//  }
+//}

@@ -98,19 +98,9 @@
 
     {% endif %}
   </header>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {{ content }}
+  </div>
 
-  <body>
-      <form action="http://localhost:8001/node/{{ node.id }}/pdf-export" method="post">
-        <button type="submit" class="button">Export PDF</button>
-      </form>
-
-      <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content }}
-      </div>
-
-{#    <div{{ content_attributes.addClass('node__content', 'clearfix') }}>#}
-{#      {{ node.body.value }}#}
-{#    </div>#}
-  </body>
 </article>
 
