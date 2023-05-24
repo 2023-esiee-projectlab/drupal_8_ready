@@ -24,7 +24,6 @@ class ExportController extends ControllerBase {
     // Set the appropriate headers for PDF.
     $response->headers->set('Content-Type', 'application/pdf');
     $response->headers->set('Content-Disposition', 'attachment; filename="article.pdf"');
-
     // Return the response.
     return $response;
   }
