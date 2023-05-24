@@ -1,5 +1,0 @@
-wmmailable.sent_mails.list:
-  title: 'Sent mails'
-  parent: system.admin_reports
-  route_name: wmmailable.sent_mails.list
-  menu_name: admin

@@ -1,4 +1,0 @@
-services:
-    plugin.manager.notification_plugin:
-        class: Drupal\notification_plugin\NotificationPluginManager
-        parent: default_plugin_manager
