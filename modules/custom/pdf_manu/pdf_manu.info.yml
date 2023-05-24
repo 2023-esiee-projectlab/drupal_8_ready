@@ -1,6 +1,0 @@
-name: PDF Manu
-description: generateur de pdf
-package: Custom
-
-type: module
-core: 8.x
