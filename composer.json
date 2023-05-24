@@ -23,6 +23,10 @@
         "drupal/paragraphs": "1.8",
         "drupal/pdf_generator": "^2.0"
     },
+    "require-dev": {
+        "drupal/entity_print": "2.6",
+        "drupal/paragraphs_modal_edit": "1.1"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -90,9 +94,5 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
-    },
-    "require-dev": {
-        "drupal/entity_print": "2.6",
-        "drupal/paragraphs_modal_edit": "1.1"
     }
 }
