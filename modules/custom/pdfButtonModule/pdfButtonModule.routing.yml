@@ -1,0 +1,15 @@
+#pdfButtonModule.export_pdf:
+#  path: '/node/{node}/pdf-export'
+#  defaults:
+#    _controller: '\Drupal\pdfButtonModule\Controller\ExportController::exportPdf'
+#    _title: 'Export as PDF'
+#  requirements:
+#    _permission: 'access content'
+
+pdfButtonModule.description:
+  path: '/pdfButtonModule/hello-world'
+  defaults:
+    _controller: '\Drupal\pdfButtonModule\Controller\ExportController::description'
+    _title: 'Hello world description'
+  requirements:
+    _permission: 'access content'

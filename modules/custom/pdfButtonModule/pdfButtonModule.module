@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ */
+function pdfButtonModule_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // Check if the content type is "article".
+  if ($variables['elements']['#node']->getType() === 'article') {
+    // Add a custom template suggestion for articles.
+    $suggestions[] = 'node--article-custom';
+  }
+}
+/**
+ * Implements hook_menu().
+ */
+function pdfButtonModule_menu(): array {
+  $items = [];
+  $items['node/%node/pdf-export'] = [
+    'title' => 'Export as PDF',
+    'route_name' => 'pdfButtonModule.export_pdf',
+    'weight' => 10,
+  ];
+  return $items;
+}
