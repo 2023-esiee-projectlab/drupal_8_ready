@@ -1,8 +1,0 @@
-name : HelloWorld
-core : 8.x
-type : module
-version : 1.0
-package : Demos
-description : 'Un addon sympa !'
-dependencies: { }
-

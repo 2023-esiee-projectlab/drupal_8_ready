@@ -1,6 +1,0 @@
-services:
-    travel_planner.acceptEmail:
-        class: Drupal\travel_planner\AcceptEmailService
-    plugin.manager.reservation:
-        class: Drupal\travel_planner\ReservationTypeManager
-        parent: default_plugin_manager

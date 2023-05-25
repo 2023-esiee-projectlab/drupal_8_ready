@@ -1,5 +1,0 @@
-pdf_generator:
-  version: 1.x
-  css:
-    theme:
-      css/pdf_generator.css: {}
