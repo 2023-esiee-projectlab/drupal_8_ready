@@ -1,7 +1,0 @@
-my_pdf_module.export_pdf:
-  path: '/node/{node}/pdf-export'
-  defaults:
-    _controller: '\Drupal\my_pdf_module\Controller\ExportController::exportPdf'
-    _title: 'Export as PDF'
-  requirements:
-    _permission: 'access content'

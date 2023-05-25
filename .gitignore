@@ -1,3 +1,13 @@
+# - - IDEs
+.idea/
+.vscode/
+
+# test modules
+modules/dev_help
+
+# modules in development
+modules/pdf_generator_drupal_module
+
 # - - gitignore template for Drupal 8 projects
 #
 #  - - earlier versions of Drupal are tracked in `community/PHP/`
@@ -7,11 +17,11 @@
 #/sites*/*services*.yml
 
 #  - - Ignore paths that may contain user-generated content
-#/sites*/files
-#/sites*/public
-#/sites*/private
-#/sites*/files-public
-#/sites*/files-private
+/sites/*/files
+/sites/*/public
+/sites/*/private
+/sites/*/files-public
+/sites/*/files-private
 
 #  - - Ignore paths that may contain temporary files
 #/sites*/translations
@@ -22,7 +32,11 @@
 #/sitessimpletest
 
 #  - - Ignore drupal core (if not versioning drupal sources)
-#/core
+core/
+modules/contrib/
+sites/default/files/
+vendor/
+
 #/modules/README.txt
 #/profiles/README.txt
 #/sitesREADME.txt
@@ -30,7 +44,6 @@
 #/sitesexample.settings.local.php
 #/sitesdevelopment.services.yml
 #/themes/README.txt
-#/vendor
 #/.csslintrc
 #/.editorconfig
 #/.eslintignore
@@ -39,7 +52,7 @@
 #/.htaccess
 #/autoload.php
 #/composer.json
-#/composer.lock
+/composer.lock
 #/example.gitignore
 #/index.php
 #/LICENSE.txt
@@ -47,4 +60,3 @@
 #/robots.txt
 #/update.php
 #/web.config
-/vendor/

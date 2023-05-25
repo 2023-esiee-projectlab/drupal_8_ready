@@ -21,7 +21,8 @@
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/paragraphs": "1.8",
-        "drupal/tcpdf": "^2.0"
+        "drupal/pdf_generator": "^2.0",
+        "esiee/pdf_generator_drupal_module": "dev-main"
     },
     "conflict": {
         "drupal/drupal": "*"
