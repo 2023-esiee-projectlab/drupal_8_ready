@@ -1,0 +1,7 @@
+name: ens
+type: theme
+base theme: bartik
+description: 'ens'
+package: Core
+# version: VERSION
+core: 8.x

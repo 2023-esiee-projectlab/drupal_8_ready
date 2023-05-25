@@ -98,14 +98,9 @@
 
     {% endif %}
   </header>
-  <body >
-
-    <button class="button" style="margin-top: 1em;">Export PDF</button>
-
-    <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-      {{ content }}
-    </div>
-  </body>
+  <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {{ content }}
+  </div>
 
 </article>
 
