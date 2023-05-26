@@ -68,9 +68,14 @@ class ExportController extends ControllerBase {
 
   public function getArticleContent($entity): array
   {
+    // get content
     $title = $entity->getTitle();
     $content = $entity->get('body')->value;
 
+    // Replace &nbsp; entities with spaces.
+    $content = str_replace('&nbsp;', ' ', $content);
+    // Remove HTML tags from the content.
+    $content = strip_tags($content);
     return [
       'title'=>$title,
       'content' => $content,
