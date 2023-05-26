@@ -21,6 +21,13 @@ Ce Drupal est prêt à l'emploi. Il vous suffit de le cloner sur votre PC et de 
 composer update && php -S localhost:8001
 ```
 
+> **NB :** Le noyau de Drupal doit être la version 8.9.7.
+> 
+> Si cela n'est pas le cas, voici la commande qui permet de forcer le choix de noyau drupal : 
+> ```shell
+> composer require drupal/core-recommended:8.9.7 drupal/core-composer-scaffold:8.9.7 drupal/core-project-message:8.9.7 --update-with-all-dependencies
+> ```
+
 ###  Identifiants
 
 - login : dev
