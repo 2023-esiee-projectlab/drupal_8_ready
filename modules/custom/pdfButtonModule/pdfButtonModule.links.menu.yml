@@ -1,5 +1,1 @@
-pdfButtonModule.link:
-  title: link Hello
-  description: 'ceci est une description du lien hello'
-  parent: system.admin_structure
-  route_name: pdfButtonModule.description
+
