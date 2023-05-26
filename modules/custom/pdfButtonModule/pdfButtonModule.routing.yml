@@ -13,3 +13,12 @@ pdfButtonModule.description:
     _title: 'Hello world description'
   requirements:
     _permission: 'access content'
+
+
+pdfButtonModule.export_pdf:
+  path: '/node/{node}/export-pdf'
+  defaults:
+    _controller: '\Drupal\pdfButtonModule\Controller\ExportController::exportPdf'
+    _title: 'Export PDF'
+  requirements:
+    _permission: 'access content'

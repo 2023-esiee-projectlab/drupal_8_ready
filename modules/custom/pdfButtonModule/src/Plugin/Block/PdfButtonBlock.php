@@ -2,7 +2,7 @@
 
 namespace Drupal\pdfButtonModule\Plugin\Block;
 use \Drupal\Core\Block\BlockBase;
-use \Drupal\Core\Form\FormStateInterface;
+
 /**
  * Provides a PDF Button block.
  *
@@ -13,7 +13,8 @@ use \Drupal\Core\Form\FormStateInterface;
  * )
  */
 class PdfButtonBlock extends BlockBase{
-  public function build() {
+  public function build(): array
+  {
     return array (
       '#markup' => $this->t('Hello Mec'.$this->configuration['block_firstname']),
     );

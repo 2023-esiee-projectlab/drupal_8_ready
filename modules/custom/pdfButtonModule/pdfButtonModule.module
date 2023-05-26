@@ -1,24 +1,63 @@
 <?php
 
+use Drupal\Core\Url;
+
+//function pdfButtonModule_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display): void
+//{
+//  // Vérifiez si l'entité est de type "node".
+//  if ($entity->getEntityTypeId() === 'node') {
+//    // Ajoutez votre bouton personnalisé au rendu de l'entité.
+//    $build['my_custom_button'] = [
+//      '#type' => 'button',
+//      '#value' => t('Export PDF'),
+//      // Ajoutez les propriétés et les attributs supplémentaires selon vos besoins.
+//    ];
+//  }
+//}
+
+
+//function my_module_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display): void
+//{
+//  // Vérifiez si l'entité est de type "node".
+//  if ($entity->getEntityTypeId() === 'node') {
+//    // Ajoutez votre bouton personnalisé avec un lien vers http://localhost:8001/pdfButtonModule/hello-world.
+//    $build['my_custom_button'] = [
+//      '#type' => 'link',
+//      '#title' => t('My Button'),
+//      '#url' => Url::fromUri('http://localhost:8001/pdfButtonModule/hello-world'),
+//      // Ajoutez les propriétés et les attributs supplémentaires selon vos besoins.
+//    ];
+//  }
+//}
+
+use Drupal\Core\Entity\EntityInterface;
+
 /**
- * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ * Implements hook_ENTITY_TYPE_view_alter() for nodes.
  */
-function pdfButtonModule_theme_suggestions_node_alter(array &$suggestions, array $variables) {
-  // Check if the content type is "article".
-  if ($variables['elements']['#node']->getType() === 'article') {
-    // Add a custom template suggestion for articles.
-    $suggestions[] = 'node--article-custom';
+function pdfButtonModule_node_view_alter(array &$build, EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display): void
+{
+  // Vérifiez si le type de contenu est "article".
+  if ($entity->getType() === 'article' || $entity->getType() === 'article_image' ) {
+    // Ajoutez le lien d'export PDF au rendu du nœud.
+    $build['pdfButtonModule_export_pdf_link'] = [
+      '#type' => 'link',
+      '#title' => t('Export PDF test'),
+      '#url' => Url::fromRoute('pdfButtonModule.export_pdf', ['node' => $entity->id()]),
+    ];
   }
 }
-/**
- * Implements hook_menu().
- */
-function pdfButtonModule_menu(): array {
-  $items = [];
-  $items['node/%node/pdf-export'] = [
-    'title' => 'Export as PDF',
-    'route_name' => 'pdfButtonModule.export_pdf',
-    'weight' => 10,
-  ];
-  return $items;
-}
+
+//function pdfButtonModule_hook_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display): void
+//{
+//  // Vérifiez si l'entité est de type "node".
+//  if ($entity->getEntityTypeId() === 'node') {
+//    // Ajoutez votre bouton personnalisé avec un lien vers une autre page.
+//    $build['my_custom_button'] = [
+//      '#type' => 'link',
+//      '#title' => t('My Button'),
+//      '#url' => Url::fromRoute('entity.node.canonical', ['node' => $entity->id()]),
+//      // Ajoutez les propriétés et les attributs supplémentaires selon vos besoins.
+//    ];
+//  }
+//}
